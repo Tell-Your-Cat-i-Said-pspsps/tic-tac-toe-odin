@@ -1,0 +1,116 @@
+:root {
+  --background-color: #0f172a;
+  --color: #f1f5f9;
+  --svg-filter: invert(7%) sepia(7%) saturate(5577%) hue-rotate(183deg)
+    brightness(96%) contrast(95%) height: 100%;
+  height: 100%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Roboto+Condensed:wght@400;600;800;900&family=Tektur:wght@400..900&display=swap");
+body {
+  font-family: "Tektur", sans-serif;
+  background-color: var(--background-color);
+  color: var(--color);
+  height: 100%;
+  margin: 0;
+}
+button {
+  background-color: var(--color);
+  color: var(--background-color);
+  font-weight: 700;
+  font-size: 36px;
+  padding: 8px 16px;
+  border: 2px solid var(--color);
+  border-radius: 8px;
+}
+.header {
+  font-size: 64px;
+  font-weight: 700;
+}
+.namesInputArea {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+.inputGrp {
+  background-color: var(--color);
+  color: var(--background-color);
+  padding: 8px;
+  border-radius: 4px;
+  flex: 0 1 400px;
+}
+.namesInputArea input {
+  background-color: var(--background-color);
+  color: var(--color);
+  font-size: 24px;
+  width: 80%;
+  margin: 8px 0;
+  border: none;
+}
+.namesArea {
+  font-size: 28px;
+  font-weight: 700;
+}
+.container,
+.game-grid {
+  text-align: center;
+  justify-content: center;
+  display: grid;
+  gap: 16px;
+}
+.container {
+  grid-template-rows: max-content max-content max-content 1fr;
+  height: 100%;
+}
+.container > div:last-child {
+  align-self: center;
+}
+.game-grid {
+  grid-template-columns: repeat(3, minmax(50px, 150px));
+  grid-template-rows: repeat(3, minmax(50px, 150px));
+  gap: 8px;
+  background-color: var(--color);
+}
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  color: var(--color);
+  background-color: var(--background-color);
+}
+.turn {
+  background-color: green;
+}
+dialog {
+  position: relative;
+  text-align: center;
+  background-color: var(--color);
+  color: var(--background-color);
+  font-size: 36px;
+  font-weight: 700;
+  border: 4px solid var(--color);
+  border-radius: 8px;
+}
+.dia .closeBtn {
+  position: absolute;
+  background-color: var(--color);
+  color: var(--background-color);
+  top: 5px;
+  right: 5px;
+}
+.closeBtn .closeBtnImg {
+  height: auto;
+  width: 40px;
+  filter: var(--svg-filter);
+}
+dialog button {
+  background-color: var(--background-color);
+  color: var(--color);
+}
+dialog::backdrop {
+  backdrop-filter: blur(1px);
+}

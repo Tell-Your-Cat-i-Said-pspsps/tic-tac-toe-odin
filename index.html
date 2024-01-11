@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project: Tic Tac Toe</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Tic Tac Toe</div>
+      <div class="namesInputArea">
+        <div class="inputGrp">
+          <p>X Mark</p>
+          <label for="playerXName">Player Name</label>
+          <input type="text" id="playerXName" value="PlayerX" />
+        </div>
+        <div class="inputGrp">
+          <p>O Mark</p>
+          <label for="playerYName">Player Name</label>
+          <input type="text" id="playerYName" value="PlayerO" />
+        </div>
+      </div>
+      <div class="namesArea"></div>
+      <div class="start">
+        <button class="startBtn">Start Game</button>
+      </div>
+    </div>
+    <dialog class="dia">
+      <button class="closeBtn">
+        <img src="./close.svg" alt="close button" class="closeBtnImg" />
+      </button>
+      <p class="gameOverMsg"></p>
+      <button class="restartGameBtn">Restart Game</button>
+    </dialog>
+  </body>
+</html>
